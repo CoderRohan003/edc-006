@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDC | Nit Durgapur</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/44a0508700.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">My Projects</a></li>
+                    <!-- <li><a href="#">Contact Us</a></li> -->
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>
+                    Hello , to all The Judges of<br>Entrepreneurship Development Cell
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ................About.............  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photo.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <br>
+                    <p>Hello everyone my name is Rohan Dutta. I am a First year student , Studying in Computer Sceince
+                        and Engineering Department in NIT Durgapur. I love to explore new things. I have quite a passion
+                        towards coding . Looking forward to experience new things in college. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Interests</p>
+                        <p class="tab-links" onclick="opentab('Extras')">Extras</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> C</li>
+                            <li> C++</li>
+                            <li> Java</li>
+                            <li> Good problem-solving skills</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> Web development </li>
+                            <li> Programming</li>
+                            <li> Photography</li>
+                            <li> Design </li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="Extras">
+                        <ul>
+                            <li>Runner-UP in Hult-Prize</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ..................Projects............... -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="guess.png">
+                    <div class="layer">
+                        <h3>Guessing Game</h3>
+                        <p>This game is about guessing numbers . Try it in the lowest attempts you can .</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="spc.jpg">
+                    <div class="layer">
+                        <h3>Stone Paper Scissor</h3>
+                        <p>This game helps you play stone paper scissors.</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="nature.jpg">
+                    <div class="layer">
+                        <h3>Project XYZ</h3>
+                        <p>This is Project XYZ.</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+
+</html>
